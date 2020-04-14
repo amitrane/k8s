@@ -1,0 +1,4 @@
+name: mygohello
+sources:
+- https://github.com/amitrane/k8s
+version: 1.0.1
