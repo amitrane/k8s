@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mygohello
+  labels:
+    app: mygohello
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mygohello
+  template:
+    metadata:
+      labels:
+        app: mygohello
+    spec:
+      containers:
+        - name: mygohello
+          image: amitrane04/mygohello
+          ports:
+          - containerPort: 8888
+          env:
+          - name: GREETING
+            value: "Hello From environment"  

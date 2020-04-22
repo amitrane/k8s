@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+        name: mygohello
+spec:
+        replicas: 3
+        template:
+                metadata:
+                        labels:
+                                app: mygohello
+                                version: "1"
+                spec:
+                        containers:
+                                - name: mygohello
+                                  image: "amitrane04/mygohello:latest"

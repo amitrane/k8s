@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mygohello
+  name: mygohello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mygohello
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mygohello
+    spec:
+      containers:
+      - image: amitrane04/mygohello
+        name: mygohello
+        resources: {}
+status: {}

@@ -1,0 +1,30 @@
+ kubectl apply -f https://j.hept.io/contour-deployment-rbac
+
+ kubectl get -n projectcontour service contour -o wide
+
+kubectl edit -n projectcontour services/contour
+Chaneg type: ClusterIP to LoadBalancer
+
+
+New Ingress: https://projectcontour.io/getting-started/
+kubectl apply -f https://projectcontour.io/quickstart/contour.yaml
+
+kubectl get -n projectcontour service envoy -o wide
+
+kubectl get -n projectcontour service contour -o wide
+
+ kubectl run mytomcat --image=gcr.io/kuar-demo/kuard-amd64:green  --port=8080
+
+ kubectl expose deployment alpaca
+
+ kubectl run bandicoot --image=gcr.io/kuar-demo/kuard-amd64:purple --port=8080
+
+ kubectl expose deployment bandicoot
+
+ kubectl get services -o wide
+
+kubectl apply -f simple-ingress.yaml
+
+kubectl apply -f host-ingress.yaml
+
+

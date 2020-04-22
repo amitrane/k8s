@@ -1,0 +1,61 @@
+ vi kuard-deployment.yaml
+  kubectl get pods
+  kubectl create -f kuard-deployment.yaml 
+  kubectl get pods
+  kubectl get deployments kuard -o jsonpath --template {.spec.selector.matchLabels}
+  kubectl get replicasets --selector=run=kuard
+  kubectl scale deployments kuard --replicas=2
+  kubectl get pods
+  kubectl get replicasets --selector=run=kuard
+  kubectl scale replicasets kuard-79d6b44c6c --replicas=1
+  kubectl get replicasets --selector=run=kuard
+  kubectl get pods
+  kubectl scale deployments kuard --replicas=1
+  kubectl get replicasets --selector=run=kuard
+  kubectl get pods
+  kubectl scale replicasets kuard-79d6b44c6c --replicas=2
+  kubectl get pods
+  kubectl get replicasets --selector=run=kuard
+  kubectl get pods
+  kubectl get replicasets --selector=run=kuard
+  kubectl get deployments kuard --export -o yaml
+  kubectl describe deployments kuard
+  cp kuard-deployment.yaml kuard-deployment_mycreated.yaml 
+  kubectl get deployments kuard --export -o yaml > kuard-deployment.yaml
+  vi kuard-deployment.yaml 
+  kubectl get pods
+  vi kuard-deployment
+  vi kuard-deployment.yaml 
+  kubectl apply -f kuard-deployment.yaml 
+  kubectl get deployements kuard
+  kubectl get pods
+  kubectl replace -f kuard-deployment.yaml --save-config
+  kubectl get pods
+  kubectl apply -f kuard-deployment.yaml
+  kubectl get deployments kuard
+  vi kuard-deployment.yaml 
+  kubectl apply -f kuard-deployment.yaml 
+  vi kuard-deployment.yaml 
+  kubectl apply -f kuard-deployment.yaml 
+  kubectl rollout status deployments kuard
+  kubectl get replicasets -o wide
+  kubectl get pods
+  kubectl get replicasets -o wide
+  kubectl rollout status deployments kuard
+  kubectl get replicasets -o wide
+  kubectl rollout pause deployments kuard
+  kubectl rollout resume deployments kuard
+  kubectl rollout history deployment kuard
+  kubectl rollout history deployment kuard --revision=2
+  kubectl rollout history deployment kuard
+  vi kuard-deployment.yaml 
+  kubectl apply -f kuard-deployment.yaml 
+  kubectl rollout history deployment kuard
+  kubectl rollout undo deployments kuard
+  kubectl rollout history deployment kuard
+  kubectl get replicasets -o wide
+  kubectl rollout undo deployments kuard --to-revision=3
+  kubectl rollout history deployment kuard
+  kubectl get replicasets -o wide
+ vi kuard-deployment.yaml 
+

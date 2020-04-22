@@ -1,0 +1,7 @@
+git init
+git add .
+git commit -m "comment"
+git remote add origin https://github.com/amitrane/k8s
+git remote -v
+git push origin master
+
